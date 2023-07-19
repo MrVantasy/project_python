@@ -1,8 +1,7 @@
 import random
 import time
 
-print("")
-print("DICE GAMES!\n")
+print("\nDICE GAMES!\n")
 time.sleep(1)
 
 me_score = 0

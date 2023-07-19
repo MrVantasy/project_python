@@ -1,7 +1,6 @@
 import time
 
-print("")
-print("QUIZZ!\n")
+print("\nQUIZZ!\n")
 time.sleep(1)
 
 print("1. What's the result of 5 + 5?")

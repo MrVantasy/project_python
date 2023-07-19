@@ -1,8 +1,7 @@
 import time
 import random
 
-print("")
-print("Number Guessing\n")
+print("\nNumber Guessing\n")
 time.sleep(1)
 
 while True:
