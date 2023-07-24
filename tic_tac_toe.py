@@ -60,21 +60,54 @@ def is_draw():
     else:
         return False
 
+Win = 0
+Lose = 0
+Tie = 0
+
 while True:
     print_board()
     player_bot_move("X")
     print_board()
     if is_win("X"):
         print("Congrats, You Win!")
-        break
+        Win += 1
+        valid = int(input("Press 1 for Continue or 2 for Done! "))
+        if valid == 1:
+            continue
+        else:
+            print(f"\nWin:{Win} | Lose:{Lose} | Tie:{Tie}")
+            break
     elif is_draw():
         print("Tie!")
-        break
+        Tie += 1
+        valid = int(input("Press 1 for Continue or 2 for Done! "))
+        if valid == 1:
+            continue
+        else:
+            print(f"\nWin:{Win} | Lose:{Lose} | Tie:{Tie}")
+            break
+    
     player_bot_move("O")
+    
     if is_win("O"):
         print_board()
         print("You Lose!")
-        break
+        Lose += 1
+        valid = int(input("Press 1 for Continue or 2 for Done! "))
+        if valid == 1:
+            continue
+        else:
+            print(f"\nWin:{Win} | Lose:{Lose} | Tie:{Tie}")
+            break
     elif is_draw():
         print("Tie!")
-        break
+        Tie += 1
+        valid = int(input("Press 1 for Continue or 2 for Done! "))
+        if valid == 1:
+            continue
+        else:
+            print(f"\nWin:{Win} | Lose:{Lose} | Tie:{Tie}")
+            break
+
+time.sleep(1)
+print("\nThank You For Playing!")
